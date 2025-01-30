@@ -12,6 +12,23 @@ The IAITH framework consists of two phases:<br>
 You can visualize the workflow directly by clicking on [topic_identification.ipynb](topic_identification.ipynb)
 
 ## Installation 
+The `web_based_app` folder contains the source code for a web-based application, including `.py` and `.html` files. Follow the steps below to run the application.
+1. **Clone the Repository**
+   Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/QidiXu96/Interactive-AI-Identifying_Topics.git
+   cd Interactive-AI-Identifying_Topics/web_based_app
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+3. **Run the Application**
+   ```bash
+   python app.py
+4. **Access the Application**
+ ```bash
+   open http://127.0.0.1:5000
+5. **Modify or Extend**
+   You can modify the .py and .html files in the web_based_app folder to customize the application.
 
 ## Prompt Structure
 ### Prompt for *Clue-LLM* in the Preprocessing phase
