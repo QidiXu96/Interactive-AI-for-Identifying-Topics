@@ -13,8 +13,8 @@ Below is a screenshot of the user interface for the `Interactive AI for Identify
 
 3. **Read Dialogue:**
    - Process the uploaded file and identify topics with corresponding extracted clues and generated reasoning.<br>
-   - If users are not satisfied with current response, they can choose 'Try again" or "Provide feedback".
-   - If users are satisfied with current response, they cab choose 'I'm satisfied' to save it.
+   - If users are not satisfied with the current response, they can choose 'Try again" or "Provide feedback".
+   - If users are satisfied with the current response, they cab choose 'I'm satisfied' to save it.
 
 4. **Uploaded File Viewer:**
    - Search and view the uploaded dialogue file directly in the application.
