@@ -1,7 +1,7 @@
 ## Web-Based Application UI
 
 Below is a screenshot of the user interface for the `Interactive AI for Identifying Topics in Heart Failure ` web-based application:
-<img width="1437" alt="Screenshot 2025-01-29 at 9 37 39 PM" src="https://github.com/user-attachments/assets/8071e80c-ae25-464e-85b7-13002e2c0e29" />
+<img width="1440" alt="Screenshot 2025-01-29 at 9 41 08 PM" src="https://github.com/user-attachments/assets/245e89b0-22fb-47e9-a3d2-0177854e124a" />
 
 ### **Features**
 1. **Azure API Configuration:**
