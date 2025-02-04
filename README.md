@@ -171,17 +171,6 @@ User: You are given {total_topics} original topics, along with their associated 
 - **Preserve Original Meaning:** Ensure the original meaning of each merged topic is maintained without introducing new interpretations.
 - **Standalone Topics:** Topics that cannot be semantically merged with others should remain as standalone consolidated topics.
 - **Complete Representation:** Confirm that all original topics ({total_topics}) are fully represented in the final consolidated output.
-Good Topics:
-- **Burden from the number of medications** (highlights the number of medications taken as a significant burden)
-- **Problem in logistics** (reports issues related to obtaining medications)
-- **Impact from patient-doctor relationship** (discusses how the interaction between patient and doctor/healthcare system influences)
-- **Adverse drug effects** (report the patient's experience of side effects from medications)
-Bad Topics:
-- **Medication management support** (vague and unclear. It does not specify whether the patient received support, lacked support, or faced issues related to medication management.)
-- **Perceived medication burden** (vague and unclear. It does not provide sufficient information about whether or not the patient experienced a medication number burden)
-- **Emotional impact of medication side effects** (combines two distinct concepts into one)
-- **Medication adherence and management** (vague and unclear, combines two distinct concepts into one)
-Make sure each identified topic follows good topic examples and avoids bad topic examples.
 ### Output Format ###
 For EACH consolidated topic, provide the following:
 Consolidated topic: [Insert consolidated topic here]
