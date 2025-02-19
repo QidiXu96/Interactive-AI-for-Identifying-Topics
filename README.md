@@ -2,7 +2,7 @@
 An Innovative Method for Theme Identification in Healthcare Qualitative Studies Using LLM and Human Collaboration
 
 ## Workflow
-![Workflow (1)](https://github.com/user-attachments/assets/f318174b-3840-4a5f-883f-2fd506e6eb4b)
+![Workflow (1)](https://github.com/user-attachments/assets/7144ecd7-4b26-46ea-b377-47bb20a69383)
 
 The IAITH framework consists of two phases:<br>
 	1.	**Preprocessing Phase**: In this phase, the *Clue-LLM* generates context-based clues from a given dialogue (with human-identified topics) in the training set. The *Reasoning-LLM* then generates reasonings that link these clues to the identified topics. The *Evaluation-LLM* analyzes the clue-reasoning-topic pairs across the training set and provides common feedback, which is used by the *Optimization-LLM* to fine-tune the clue and reasoning instructions. These four LLM agents work together iteratively to refine the instructions.<br>
