@@ -9,7 +9,7 @@ The IAITH framework consists of two phases:<br>
 	2.	**Inference Phase**: In this phase, the *Topic-LLM* utilizes the finetuned clue and reasoning instructions to identify all applicable. This process is repeated multiple times to ensure the identification of consistent topics. Human involvement is actively encouraged during this phase to provide feedback. The identified topics are then processed by the *Merge-LLM*, which clusters them by merging semantically related or synonymous topics to generate the higher-level topics (codebook).<br>
 
 ## No Installation
-You can visualize the workflow directly by clicking on [topic_identification.ipynb](topic_identification.ipynb)
+You can visualize the workflow directly by clicking on [topic_identification_covide19.ipynb](topic_identification_covide19.ipynb)
 
 ## Installation 
 The `web_based_app` folder contains the source code for a web-based application, including `.py` and `.html` files. Follow the steps below to run the application.
