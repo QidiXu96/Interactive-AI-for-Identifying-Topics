@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Identification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        textarea {
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        button:hover {
+            background-color: #e9ecef;
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="display: flex; height: 100vh;">
+        <!-- Left Part: Existing Functions -->
+        <div style="width: 50%; padding: 20px; overflow-y: auto;">
+            <h1>Topic Identification Processor</h1>
+            <!-- Azure API Configuration -->
+            <h2>Azure API Configuration</h2>
+            <form id="azure-config-form">
+                <label for="azure_endpoint">Azure Endpoint:</label>
+                <input type="text" id="azure_endpoint" placeholder="https://your-endpoint.openai.azure.com" required><br><br>
+    
+                <label for="api_key">API Key:</label>
+                <input type="text" id="api_key" placeholder="Your API Key" required><br><br>
+    
+                <label for="api_version">API Version:</label>
+                <input type="text" id="api_version" placeholder="2023-05-15" required><br><br>
+    
+                <label for="model">Model:</label>
+                <input type="text" id="model" placeholder="gpt-4" required><br><br>
+    
+                <button type="button" id="save-config-button">Save Configuration</button>
+            </form>
+    
+            <!-- Upload Dialogue File -->
+            <h2>Upload an Interview File</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" name="dialogue" id="dialogue-file">
+                <button type="submit">Upload</button>
+            </form>
+    
+            <!-- Process Dialogue -->
+            <h2>Process Interview</h2>
+            <button id="process-button">Process Interview</button>
+    
+            <!-- Results Section -->
+            <div id="results-section" class="hidden">
+                <h2>Identified Topics</h2>
+                <textarea id="results-display" rows="10" readonly></textarea>
+    
+                <h3>What would you like to do next?</h3>
+                <button id="satisfied-button">I'm satisfied</button>
+                <button id="not-satisfied-button">Provide Feedback</button>
+                <button id="try-again-button">Try Again</button>
+            </div>
+    
+            <!-- Feedback Section -->
+            <div id="feedback-section" class="hidden">
+                <h3>Provide Feedback</h3>
+
+                <p style="background-color: #fff3cd; color: #856404; padding: 10px; border-radius: 5px; border: 1px solid #ffeeba;">
+                    <strong>Notice:</strong> Please provide feedback on any topics you find unsatisfactory and suggest improvements. 
+                    <br>For example: <i>"Topic XXX and its corresponding clues are unclear; consider refining it by focusing on XXX."</i>
+                </p>
+
+                <textarea id="feedback" placeholder="Enter your feedback here" rows="6"></textarea><br>
+                <button id="regenerate-button">Regenerate with Feedback</button>
+            </div>
+    
+            <!-- Regenerated Results Section -->
+            <div id="regenerated-results-section" class="hidden">
+                <h2>New Identified Topics</h2>
+                <textarea id="regenerated-results-display" rows="10" readonly></textarea>
+            </div>
+        </div>
+    
+        <!-- Right Part: File Viewer with Search -->
+        <div style="width: 50%; padding: 20px; border-left: 1px solid #ccc; overflow-y: auto;">
+            <h1>Uploaded Interview Viewer</h1>
+            <input type="text" id="search-bar" placeholder="Search keywords..." style="width: 100%; margin-bottom: 10px;">
+            <pre id="file-content" style="white-space: pre-wrap; height: 80%; overflow-y: auto;"></pre>
+        </div>
+    </div>
+
+    <script>
+        let uploadedFilePath = ""; // Store the uploaded file path globally
+        let currentResults = []; // Store the initial results globally
+
+        // Function to reset buttons and sections
+        function resetButtons() {
+            document.getElementById("results-section").classList.remove("hidden");
+            document.getElementById("feedback-section").classList.add("hidden");
+        }
+
+        // Notify users when responses are displayed
+        function notify(message) {
+            alert(message);
+        }
+
+        // Save Azure API configuration
+        document.getElementById("save-config-button").addEventListener("click", async () => {
+            const azureConfig = {
+                azure_endpoint: document.getElementById("azure_endpoint").value,
+                api_key: document.getElementById("api_key").value,
+                api_version: document.getElementById("api_version").value,
+                model: document.getElementById("model").value
+            };
+
+            const response = await fetch('/save-azure-config', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(azureConfig)
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                alert(data.message);
+            } else {
+                alert(data.error || "Error saving API configuration!");
+            }
+        });
+
+        document.getElementById("upload-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    const response = await fetch('/upload-dialogue', {
+        method: 'POST',
+        body: formData
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+        alert(data.message);
+        uploadedFilePath = data.file_path; 
+        console.log("Uploaded File Path: ", uploadedFilePath);
+
+        // Fetch the file content and display it
+        const fileResponse = await fetch(`/get-file-content?file_path=${uploadedFilePath}`);
+        const fileData = await fileResponse.json();
+        if (fileResponse.ok) {
+            document.getElementById("file-content").textContent = fileData.content;
+        } else {
+            alert(fileData.error || "Error fetching file content!");
+        }
+    } else {
+        alert(data.error || "Error uploading file!");
+    }
+});
+
+// Search functionality
+document.getElementById("search-bar").addEventListener("input", () => {
+    const keyword = document.getElementById("search-bar").value.toLowerCase();
+    const fileContent = document.getElementById("file-content");
+    const text = fileContent.textContent;
+
+    // Highlight matching keywords
+    const highlightedText = text.replace(new RegExp(keyword, 'gi'), (match) => {
+        return `<mark>${match}</mark>`;
+    });
+
+    fileContent.innerHTML = highlightedText;
+});
+        // Process the dialogue
+        document.getElementById("process-button").addEventListener("click", async () => {
+            const response = await fetch('/process-dialogue', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ file_path: uploadedFilePath })
+            });
+
+            const data = await response.json();
+            if (data.topics) {
+                currentResults = data.topics;
+                document.getElementById("results-section").classList.remove("hidden");
+                document.getElementById("results-display").value = JSON.stringify(data.topics, null, 2)
+                .replace(/\\n/g, '\n') // Convert escaped newlines
+                .replace(/\\\"/g, '"') // Convert escaped quotes
+                .replace(/\\\\/g, '\\') // Convert double-backslashes to single-backslash
+                .trim(); // Remove unnecessary spaces
+
+                notify("Response has been displayed!");
+            } else {
+                alert(data.error || "Error processing dialogue!");
+            }
+        });
+
+        // Handle feedback regeneration
+        document.getElementById("regenerate-button").addEventListener("click", async () => {
+            const feedback = document.getElementById("feedback").value;
+
+            if (!feedback) {
+                alert("Please provide feedback before regenerating.");
+                return;
+            }
+
+            const response = await fetch('/regenerate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file_path: uploadedFilePath,
+                    feedback: feedback,
+                    previous_results: currentResults
+                })
+            });
+
+            const data = await response.json();
+            if (data.regenerated_results) {
+                currentResults = data.regenerated_results;
+
+                // Show the regenerated results section
+                const regeneratedSection = document.getElementById("regenerated-results-section");
+                regeneratedSection.classList.remove("hidden");
+
+                // Display the regenerated results
+                document.getElementById("regenerated-results-display").value = JSON.stringify(data.regenerated_results, null, 2)
+                .replace(/\\n/g, '\n') // Convert escaped newlines
+                .replace(/\\\"/g, '"') // Convert escaped quotes
+                .replace(/\\\\/g, '\\') // Convert double-backslashes to single-backslash
+                .trim(); // Remove unnecessary spaces
+
+                // Reset buttons for next loop
+                resetButtons();
+                notify("Regenerated response has been displayed!");
+                document.getElementById("feedback").value = "";
+            } else {
+                alert(data.error || "Error regenerating response!");
+            }
+        });
+
+        // Handle "I'm satisfied"
+        document.getElementById("satisfied-button").addEventListener("click", async () => {
+            const response = await fetch('/finalize-response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ final_response: currentResults })
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                alert("Response has been finalized and stored. Thank you!");
+            } else {
+                alert(data.error || "Error finalizing response!");
+            }
+        });
+
+        // Show feedback section
+        document.getElementById("not-satisfied-button").addEventListener("click", () => {
+            document.getElementById("feedback-section").classList.remove("hidden");
+        });
+
+        // Retry without feedback
+        document.getElementById("try-again-button").addEventListener("click", async () => {
+            const response = await fetch('/regenerate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file_path: uploadedFilePath,
+                    feedback: null,
+                    previous_results: null
+                })
+            });
+
+            const data = await response.json();
+            if (data.regenerated_results) {
+                currentResults = data.regenerated_results;
+                document.getElementById("results-display").value = JSON.stringify(data.regenerated_results, null, 2)
+                .replace(/\\n/g, '\n') // Convert escaped newlines
+                .replace(/\\\"/g, '"') // Convert escaped quotes
+                .replace(/\\\\/g, '\\') // Convert double-backslashes to single-backslash
+                .trim(); // Remove unnecessary spaces
+
+                // Reset buttons for next loop
+                resetButtons();
+                notify("New response has been displayed!");
+            } else {
+                alert(data.error || "Error regenerating response!");
+            }
+        });
+    </script>
+</body>
+</html>
