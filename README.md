@@ -11,7 +11,7 @@ The CoTI framework consists of two phases:<br>
 <br>
 
 ## No Installation
-You can visualize the workflow directly by clicking on [topic_identification_covid19.ipynb](topic_identification_covid19.ipynb)
+You can visualize the workflow directly by clicking on [topic_identification_covid19.ipynb](src/covid_topic_identification.ipynb)
 
 ## Installation 
 The `web_based_app` folder contains the source code for a web-based application, including `.py` and `.html` files. Follow the steps below to run the application.
