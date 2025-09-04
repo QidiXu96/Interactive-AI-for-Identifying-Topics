@@ -27,7 +27,7 @@ def init_client(azure_endpoint, api_key, api_version):
         api_version=api_version
     )
 
-def get_completion(messages, model="gpt-4o-mini-Qidi", max_tokens=6000, temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0):
+def get_completion(messages, model="model_name", max_tokens=6000, temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0):
     """
     Get a completion from the Azure OpenAI API using the initialized client. 
     """
