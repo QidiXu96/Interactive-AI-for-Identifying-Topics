@@ -1,10 +1,10 @@
 # Interactive-AI-for-Identifying-Topics
-An Innovative Method for Theme Identification in Healthcare Qualitative Studies Using LLM and Human Collaboration
+An Innovative Method for Theme Identification in Healthcare Qualitative Studies Using AI-Human Collaboration
 
 ## Workflow
-![workflow1 (2)](https://github.com/user-attachments/assets/e84d1d45-94ac-4e3c-8f82-a2dd458f5df6)
+<img width="6648" height="5288" alt="study overview topic new (11)" src="https://github.com/user-attachments/assets/c95c8ec7-6725-4aa4-959b-b72b294037d6" />
 
-The IAITH framework consists of two phases:<br>
+The CoTI framework consists of two phases:<br>
 	1.	**Preprocessing Phase**: In this phase, the *Clue-LLM* generates context-based clues from a given dialogue (with human-identified topics) in the training set. The *Reasoning-LLM* then generates reasonings that link these clues to the identified topics. The *Evaluation-LLM* analyzes the clue-reasoning-topic pairs across the training set and provides common feedback, which is used by the *Optimization-LLM* to fine-tune the clue and reasoning instructions. These four LLM agents work together iteratively to refine the instructions.<br>
 	2.	**Inference Phase**: In this phase, the *Topic-LLM* utilizes the finetuned clue and reasoning instructions to identify all applicable. This process is repeated multiple times to ensure the identification of consistent topics. Human involvement is actively encouraged during this phase to provide feedback. The identified topics are then processed by the *Merge-LLM*, which clusters them by merging semantically related or synonymous topics to generate the higher-level topics (codebook).<br>
 
