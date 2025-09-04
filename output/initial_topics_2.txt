@@ -1,0 +1,63 @@
+Identify topic: Impact of the pandemic on service delivery (referral practices, operational changes)  
+Clues:  
+- “We don’t do it here even if it is possible because the structure is small.”  
+- “We stop all incoming patients at the steps and ask them to put on their face masks.”  
+- “We put a hold on deliveries because of the night curfew. Though we don’t run night shift, we write our phone numbers on the pregnant mothers clinic cards to call anyone of us in a case they go into labor at night.”  
+- “The only thing we changed at the height of the Corona. We used to tell any patient that goes to our home for medical treatment, to meet us at the facility.”  
+- “Patients were coming. To say that because of the Corona they were afraid to come, least they catch the sick, no they were coming.”  
+
+Reasoning:  
+The respondent describes operational adjustments like mask mandates, halted home visits, and curfew-related delivery protocols. They also note that while patient inflow initially dropped due to fear, services eventually resumed. These changes directly relate to how the facility adapted its operations and service delivery during the pandemic.  
+
+Identify topic: Patient access and behavior changes due to fear and curfew  
+Clues:  
+- “Some were afraid. They say: ‘I wouldn’t dare to give birth at that hospital, least they say I have Corona’.”  
+- “Fear of the curfew, we just advise them to go to the government hospital.”  
+- “We put a hold on deliveries because of the night curfew.”  
+- “They (patients) plead with us to manage them here. They say: ‘Please don’t send us there, manage us here’.”  
+
+Reasoning:  
+The respondent highlights reduced patient inflow due to fear of infection and curfew restrictions. Patients avoided seeking care, particularly for deliveries, and resisted referrals to larger hospitals. This reflects behavioral shifts affecting access to services.  
+
+Identify topic: Supply chain and financial challenges (drug shortages, cost increases)  
+Clues:  
+- “Drugs we used to buy at Le 2000, we now buy them at Le 5000. For example, we used to buy novalgin at Le. 1000 for 10 tablets, now cost us Le. 5000.”  
+- “Not all the drugs supplies we used to receive before the Corona were included in our supplies after the outbreak.”  
+- “We experienced that because, not all the drugs supplies we used to receive before the Corona were included in our supplies after the outbreak.”  
+
+Reasoning:  
+The respondent explicitly mentions rising drug costs and supply gaps, directly linking financial strain and supply shortages to the pandemic’s economic impacts.  
+
+Identify topic: Legacy of the Ebola outbreak influencing response strategies  
+Clues:  
+- “Hand washing has been part of us since the Ebola outbreak.”  
+- “We had not even started the nursing study. I was attending classes for the nursing entrance exam, but was stopped when we got the Ebola outbreak. That was 2015.”  
+- “The government tried. All entry points into our country were blocked. So it was good.”  
+
+Reasoning:  
+The respondent contrasts pandemic responses with Ebola, noting that hand hygiene practices persisted post-Ebola and praising the government’s rapid border closures—a lesson from prior outbreaks.  
+
+Identify topic: Mental health and lack of support for healthcare workers  
+Clues:  
+- “The stress was there. Our fear was of the possibility of being infected through a patient one might be attending to and then go home to our families with the sick.”  
+- “No support was provided to deal with these changes or stress.”  
+- “We were not receiving any supply of PPEs during this corona, but we have them.”  
+
+Reasoning:  
+The respondent emphasizes fear of infection and lack of psychological or material support, including PPE shortages except for masks. This underscores systemic neglect of worker well-being.  
+
+Identify topic: Staff shortages and payment issues affecting service continuity  
+Clues:  
+- “I have worked here for government for two years without salary.”  
+- “The staffs attached to this facility before this outbreak are the same staffs up to now.”  
+
+Reasoning:  
+The respondent’s unpaid salary and lack of staff additions despite pandemic pressures indicate systemic workforce instability, risking service sustainability.  
+
+Identify topic: PPE availability and reliance on past outbreak supplies  
+Clues:  
+- “We didn’t witness any supply of PPEs during this corona, but we have them. I can’t recall receiving any other supply of PPEs. Oh yes.”  
+- “Supply since during the Ebola outbreak I think.”  
+
+Reasoning:  
+The respondent explicitly states that PPE stock relied on pre-pandemic Ebola-era supplies, highlighting inadequate pandemic-specific resource allocation.

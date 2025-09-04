@@ -1,0 +1,73 @@
+Identify topic: Fear and Stigma Affecting Patient Attendance  
+Clues:  
+- "because of the fear you know and because of the kind of fear people get so because of that they have other medical conditions that they supposed to come to the hospital they didn’t come to the hospital because of the COVID fear so we had a lot of deaths and all that."  
+- "they feared that we should not infect them so they were not coming to the hospital and they have another fear that if they come they will be infected them with COVID and even the lab that do the test, you get sick and come to the hospital they will say you have COVID and they will arrest you then put you into an ambulance and rushed with you."  
+- "patients were not coming because they have this perception that we are the carriers of the virus we the health workers."  
+
+Reasoning:  
+The respondent explicitly links reduced patient attendance to community fear of contracting or being quarantined due to perceived hospital-associated risks. The quotes highlight stigma (belief hospitals spread the virus) and fear of arrest/quarantine as barriers, directly connecting to patient reluctance.  
+
+---  
+
+Identify topic: Adaptations in Service Delivery During Pandemic  
+Clues:  
+- "we strengthen the triage, we strengthen the triage units and make sure we equip them very well for them to be able to pick up vital signs, we sent them for trainings, and they were having their forms and everything."  
+- "we have series of hand washing point and we provide a lot of masks which are cloths they sewed for the patients and we put them out there and put people in charge."  
+- "we reduce, all of us were not coming together sometime one doctor will come for the paediatric by day by the paediatric page book and see them then the other day another one will come so is like that so we won’t be congested."  
+
+Reasoning:  
+The respondent describes specific operational changes (enhanced triage, handwashing stations, mask distribution, and staff rotation schedules) implemented to mitigate pandemic risks. These adaptations directly address service delivery adjustments to manage contagion and resource constraints.  
+
+---  
+
+Identify topic: Legacy of Ebola on COVID-19 Response  
+Clues:  
+- "the fear factor and I believe that the EBOLA made the fear more increased during this COVID because people know how it hit us and the number of people that were dying and all so this time people fear to work because they are health workers, they don’t know the difference between the two viruses so they were thinking it that similar thing the EBOLA has come back again."  
+- "EBOLA was more deadly, out of 10 patients 8 will die, COVID out of 10 patients 8 will survived maybe 1 or 2 will die base on other factors with other conditions and all but for me COVID is better."  
+
+Reasoning:  
+The respondent explicitly connects heightened community fear during COVID-19 to the trauma of Ebola, noting that Ebola’s mortality rates influenced public perception. The comparison of response strategies and outcomes between the two outbreaks underscores the lingering impact of past epidemics on current preparedness.  
+
+---  
+
+Identify topic: Health Workers' Mental Health and Safety Concerns  
+Clues:  
+- "it was scary my sister, it was scary. We were even afraid of ourselves like everybody will keep to his or her lane, be in your office, be in your department or sit down at your corner and wear your mask because we were all suspects."  
+- "some of us were using mask all the time at home just not to infect our children because we don’t want live like that but eventually it came out negative and we were negative and we never get sick and we thank God for that but it was really scary at that time when the thing started to affect us during the time of the rise in cases."  
+- "my parents were really scared and I never told them that I work in the isolation unit it would have made them to you know, but it was really scary but we have to do what we did."  
+
+Reasoning:  
+Quotes reveal anxiety among health workers about contracting the virus, fear of infecting family, and measures taken (e.g., masking at home, social distancing at work). The emotional tone ("scary," "afraid of ourselves") directly ties to mental health and safety concerns.  
+
+---  
+
+Identify topic: Impact on Non-COVID Services and Supply Chain Challenges  
+Clues:  
+- "we were having a little bit of lapses of recent in things that we know is not available and all but at least the pharmacy is doing well now from the start of the COVID at least it better that what I will say."  
+- "if it a surgical attention they need we give them, medical we give them so we are still seeing them."  
+- "we make prescription and give to the relatives to buy outside and get the drugs to save the patient’s life if they are not available in the facility that how we do it."  
+
+Reasoning:  
+The respondent notes persistent supply shortages (e.g., drugs, equipment) forcing patients to source medications externally. Despite continuity of services (e.g., surgeries, maternity care), supply gaps and reliance on external procurement highlight systemic strain on non-COVID care.  
+
+---  
+
+Identify topic: Ebola vs. COVID-19 Response and Outcomes  
+Clues:  
+- "EBOLA was more deadly, out of 10 patients 8 will die, COVID out of 10 patients 8 will survived maybe 1 or 2 will die base on other factors with other conditions and all."  
+- "people were dying a lot in the holding centre during the time of the EBOLA… nobody died in the holding centre during the time of the COVID."  
+- "the mod of this one transmission is more faster and all so to me EBOLA was more deadlier than COVID but COVID is more contagious than EBOLA."  
+
+Reasoning:  
+The respondent contrasts the two outbreaks’ mortality rates (Ebola higher), transmission speed (COVID higher), and treatment outcomes. Direct comparisons of patient survival rates and hospital protocols (e.g., chlorine’s role in Ebola deaths) highlight differing responses and impacts.  
+
+---  
+
+Identify topic: Recommendations for Health System Strengthening  
+Clues:  
+- "we need a lot of things we want government to help us, we have a lot of shortage of equipment, we need a lot of trainings, we don’t have all what it takes to carry out our work effectively, even the facility is not conducive the place is so choked that distancing we are not able to conform all the time."  
+- "we need a lot of trainings for definitions to improve our knowledge locally and internationally if they are able to helped us it fine."  
+- "they need to motivate our health workers a lot of grumbling is going around people don’t have energy to work because money rules the work because money is the thing that motivates."  
+
+Reasoning:  
+The respondent explicitly lists systemic needs: better infrastructure (spacious facilities, radiology, blood banks), equipment, training, and financial incentives. The quotes directly advocate for structural improvements to enhance pandemic resilience and service quality.
