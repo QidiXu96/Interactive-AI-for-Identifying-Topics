@@ -37,7 +37,7 @@ The `web_based_app` folder contains the source code for a web-based application,
 ## Prompt Structure
 ### Prompt for *initial topic discovery* in the Preprocessing phase
 ```
-System message: 
+System message:
 ### Background ###
 Heart failure patients' perception of medication intensity is a complex experience influenced by factors beyond dosage, including side effects, treatment burden, psychological impact, quality of life, and cost. This perception is shaped by patient characteristics such as age, disease severity, comorbidities, gender, and socioeconomic status. Understanding these perceptions, along with patients' beliefs about their medications, is crucial for improving adherence and tailoring treatment strategies to enhance their quality of life. Ultimately, a patient-centered approach that involves effective communication and shared decision-making is essential in managing heart failure medication regimens.
 
@@ -87,6 +87,7 @@ Dialogue: {dialogue}
 Topics: {topics}
 ### Output Format EXACTLY following ###        
 Topic: clues
+
 ```
 ### Prompt for *Reasoning-LLM* in the Preprocessing phase
 ```
@@ -140,12 +141,14 @@ Based on your evaluation of all the Clues-Reasoning-Topic pairs, provide in the 
 **Suggestions for Improvement:**
 - **Clue Prompt:** Propose specific improvements to the clue generation prompt.
 - **Reasoning Prompt:** Recommend actionable enhancements to the reasoning generation prompt.
+
 ```
 ### Prompt for *Optimization-LLM* in the Preprocessing phase
 ```
 System message: 
 You are part of an optimization system that improves text. You will be asked to creatively and critically improve the clue prompt and reasoning prompt (instructions).  You will receive some feedback, and use the feedback to improve both clue and reasoning prompts simultaneously. The feedback may be noisy, identify what is important and what is correct. Pay attention to the role description of the clue and reasoning prompts (instructions), and the context in which it is used. 
            
+
 User message: 
 You are tasked with improving two prompts based on provided feedback.
 
@@ -224,7 +227,7 @@ Clues (max 200 words): [Insert clues here]
 Reasoning (max 150 words): [Insert reasoning here]
 Dialogue: {dialogue}
 ```
-### Prompt for *Codebook-LLM* in the Inference phase
+### Prompt for *CodebookGenerator* in the Inference phase
 ```
 System message: 
 You are a qualitative research expert assisting in developing a thematic codebook from structured interview results.
@@ -244,7 +247,7 @@ Each code in the codebook should include:
 Only merge topics when there is a strong conceptual overlap. Be precise and avoid redundancy.
 
 User message: 
-Below is a JSON file containing multiple patients’ identified topics with extracted clues and generated reasoning.
+Below is a JSON file containing multiple identified topics with extracted clues and generated reasoning.
 **Your task is to create a robust and conceptually sound codebook.** This is a crucial step in thematic analysis for organizing and synthesizing qualitative data.
 
 ### Instructions for Codebook Formation ### 
@@ -263,7 +266,7 @@ Below is a JSON file containing multiple patients’ identified topics with extr
 ### Examples of Correct Merging ### 
 - 'Low financial burden' + 'High financial burden' → 'Financial Impact of Medications' (shared key concept: **Financial Impact**).
 - 'Mistrust doctor' + 'Trust doctor' → 'Patient-Doctor Relationship' (shared key concept: **Relational Trust**).
-### Input JSON: {original json file}  
+### Input JSON: {original json file}
 ```
 
 
