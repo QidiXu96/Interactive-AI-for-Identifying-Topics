@@ -1,12 +1,12 @@
 # Collaborative Theme Identification (CoTI): A Multi-Agent LLM Framework for Hybrid Automated–Collaborative Qualitative Analysis in Heart Failure
 
 ## Workflow
-<img width="6648" height="5288" alt="study overview topic new (11)" src="https://github.com/user-attachments/assets/c95c8ec7-6725-4aa4-959b-b72b294037d6" />
+<img width="6368" height="4488" alt="new fig 1 (7)" src="https://github.com/user-attachments/assets/6991218c-9354-4729-bbd9-61cd55078e74" />
 
 The CoTI framework consists of two phases:<br>
-	1.	**Preprocessing Phase**: The preprocessing phase was designed to develop refined clue and reasoning instructions using *Refiner*. This process began with the random selection of several interviews as training examples, which were submitted to the reasoning model to identify relevant topics. These AI-generated topics served as learning examples to iteratively refine the clue and reasoning instructions. The refinement process is iterative, consisting of four interconnected stages: clue instruction, reasoning instruction, evaluation, and optimization. Each stage built upon the previous one, ensuring a systematic progression toward high-quality clue and reasoning instructions.
+	1.	**Instruction Generation Phase**: This phase was designed to develop refined clue and reasoning instruction prompts using *Instructor*. This process began with the random selection of several interviews as training examples, which were submitted to the reasoning model to identify relevant themes. These AI-generated themes served as learning examples to iteratively refine the clue and reasoning instruction prompts. The refinement process is iterative, consisting of four interconnected stages: clue instruction, reasoning instruction, evaluation, and optimization. Each stage built upon the previous one, ensuring a systematic progression toward high-quality clue and reasoning instructions.
 <br>
-	2.	**Inference Phase**: The inference phase aimed to apply the refined clue and reasoning instructions to identify topics for new interviews using *Thematizer*. This phase involved two key steps: topic identification, which involved identifying all applicable topics for each interview (individual-level), and topic merging, which clustered similar topics across all interviews into higher-level topics to develop a final codebook (group-level).
+	2.	**Theme Identification Phase**: This phase aimed to apply the refined clue and reasoning instructions to identify themes for each interview using *Thematizer* and summarize similar themes across all interviews into a final codebook using *CodebookGenerator*.
 <br>
 
 ## No Installation
