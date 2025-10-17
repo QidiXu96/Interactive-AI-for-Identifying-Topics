@@ -1,5 +1,4 @@
-# Interactive-AI-for-Identifying-Topics
-An Innovative Method for Theme Identification in Healthcare Qualitative Studies Using AI-Human Collaboration
+# Collaborative Theme Identification (CoTI): A Multi-Agent LLM Framework for Hybrid Automated–Collaborative Qualitative Analysis in Heart Failure
 
 ## Workflow
 <img width="6648" height="5288" alt="study overview topic new (11)" src="https://github.com/user-attachments/assets/c95c8ec7-6725-4aa4-959b-b72b294037d6" />
